@@ -35,6 +35,19 @@ class LoginViewController: UIViewController {
     }
     
 
+    @IBAction func help(_ sender: Any) {
+           
+           let myAlert = UIAlertController(title: "Alert", message: "This is help button!", preferredStyle: UIAlertController.Style.alert)
+           
+           let okAction = UIAlertAction(title: "OK" , style: UIAlertAction.Style.default){
+               ACTION in
+               self.dismiss(animated: true, completion: nil)
+           }
+           
+           myAlert.addAction(okAction)
+           self.present(myAlert, animated: true, completion: nil)
+           
+       }
     
     @IBAction func OnClickLogin(_ sender: Any) {
         

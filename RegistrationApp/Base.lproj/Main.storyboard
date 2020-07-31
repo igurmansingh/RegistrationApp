@@ -128,6 +128,14 @@
                                     <action selector="OnClickLogin:" destination="8Js-KE-Zl3" eventType="touchUpInside" id="eyY-bA-J7p"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxM-Jv-wSH">
+                                <rect key="frame" x="180" y="554" width="54" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Help"/>
+                                <connections>
+                                    <action selector="help:" destination="8Js-KE-Zl3" eventType="touchUpInside" id="UAf-g7-hsT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a4i-RI-56i"/>
