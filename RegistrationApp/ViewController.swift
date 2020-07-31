@@ -10,11 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logoutButton.layer.cornerRadius = 8.0
+        
         // Do any additional setup after loading the view.
     }
 
-
+    override func viewDidAppear(_ animated: Bool) {
+        let isLogged = UserDefaults.standard.bool(forKey: "isUserLoggedin")
+        if(!isLogged){
+            self.performSegue(withIdentifier: "loginView", sender: self)
+        }
+    }
+    
+    
+    @IBAction func onLogoutClick(_ sender: Any) {
+        
+        UserDefaults.standard.set(false,forKey: "isUserLoggedin")
+        UserDefaults.standard.synchronize()
+        
+        self.performSegue(withIdentifier: "loginView", sender: self)
+        
+    }
+    
 }
 
